@@ -1,0 +1,4 @@
+{
+  "name": "Porta retrato",
+  "display": "standalone"
+}
