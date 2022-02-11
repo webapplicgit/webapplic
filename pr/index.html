@@ -1,0 +1,45 @@
+<html>
+<head>
+	
+	<link rel="manifest" href="/manifest.txt">
+
+</head>
+
+<body style="background-size: cover;">
+ 
+<div id="images"></div>
+
+</body>
+
+<script type="text/javascript">
+
+
+var images=['img1.jpg','img2.jpg'];
+
+setInterval(function(){
+  var url=images[Math.floor(Math.random() * images.length)];
+  document.body.style.backgroundImage = 'url('+url+')';  
+},5000);
+
+
+if (typeof document.cancelFullScreen != 'undefined' && document.fullScreenEnabled === true) {
+  // mozilla proposal
+  element.requestFullScreen();
+  document.cancelFullScreen(); 
+
+  // Webkit (works in Safari and Chrome Canary)
+  element.webkitRequestFullScreen(); 
+  document.webkitCancelFullScreen(); 
+
+  // Firefox (works in nightly)
+  element.mozRequestFullScreen();
+  document.mozCancelFullScreen(); 
+
+  // W3C Proposal
+  element.requestFullscreen();
+  document.exitFullscreen();
+}
+
+</script>
+
+</html>
